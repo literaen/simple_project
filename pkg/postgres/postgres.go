@@ -3,24 +3,23 @@ package postgres
 import (
 	"fmt"
 
+	"github.com/literaen/simple_project/pkg/config"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
-
-	"github.com/literaen/simple_project/pkg/config"
 )
 
 type GDB struct {
 	DB *gorm.DB
 }
 
-func NewGDB(cfg *config.Config) (*GDB, error) {
+func NewGDB(creds *config.DB_CREDS) (*GDB, error) {
 	dsn := fmt.Sprintf(
 		"host=%s user=%s password=%s dbname=%s port=%s sslmode=disable",
-		cfg.DB.Host,
-		cfg.DB.User,
-		cfg.DB.Password,
-		cfg.DB.Name,
-		cfg.DB.Port,
+		creds.Host,
+		creds.User,
+		creds.Password,
+		creds.Name,
+		creds.Port,
 	)
 
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
