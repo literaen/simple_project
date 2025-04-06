@@ -6,7 +6,7 @@ import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 
-	"simple_project/pkg/config"
+	"github.com/literaen/simple_project/pkg/config"
 )
 
 type GDB struct {
