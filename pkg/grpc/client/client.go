@@ -56,7 +56,7 @@ func (c *Client) AutoReconnect(ctx context.Context, target string) {
 			default:
 				if !c.IsReady() {
 					if err := c.Connect(ctx, target); err != nil {
-						log.Printf("Connection failed: %v", err)
+						log.Printf("Connection to %v failed: %v", target, err)
 						time.Sleep(3 * time.Second)
 						continue
 					}
