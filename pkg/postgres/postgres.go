@@ -27,5 +27,9 @@ func NewGDB(creds *config.DB_CREDS) (*GDB, error) {
 		return nil, fmt.Errorf("error connecting to the database: %v", err)
 	}
 
+	if err := db.Exec(`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`).Error; err != nil {
+		return nil, fmt.Errorf("failed to enable uuid-ossp extension: %w", err)
+	}
+
 	return &GDB{DB: db}, nil
 }
