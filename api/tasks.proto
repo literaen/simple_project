@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package tasks_proto;
 
-option go_package = "github.com/literaen/simple_project/proto/gen";
+option go_package = "github.com/literaen/simple_project/api";
 
 message Task {
     uint64 id = 1;

@@ -4,7 +4,7 @@
 // 	protoc        v6.30.2
 // source: tasks.proto
 
-package gen
+package api
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -558,7 +558,7 @@ const file_tasks_proto_rawDesc = "" +
 	"\n" +
 	"UpdateTask\x12\x1e.tasks_proto.UpdateTaskRequest\x1a\x1f.tasks_proto.UpdateTaskResponse\x12M\n" +
 	"\n" +
-	"DeleteTask\x12\x1e.tasks_proto.DeleteTaskRequest\x1a\x1f.tasks_proto.DeleteTaskResponseB.Z,github.com/literaen/simple_project/proto/genb\x06proto3"
+	"DeleteTask\x12\x1e.tasks_proto.DeleteTaskRequest\x1a\x1f.tasks_proto.DeleteTaskResponseB(Z&github.com/literaen/simple_project/apib\x06proto3"
 
 var (
 	file_tasks_proto_rawDescOnce sync.Once

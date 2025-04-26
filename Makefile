@@ -1,5 +1,5 @@
-PROTO_DIR = proto
-OUT_DIR = proto/gen
+PROTO_DIR = api
+OUT_DIR = api
 PROTO_FILES = $(wildcard $(PROTO_DIR)/*.proto)
 
 .PHONY: proto
